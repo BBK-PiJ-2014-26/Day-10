@@ -17,4 +17,17 @@ public class SmartPhone extends MobilePhone {
 		return result;
 	}
 
+	/**
+	* Override call() method to defer 00 numbers via the internet.
+	*/
+	@Override
+	public void call(String number) {
+		String s = number.substring(0, 2);
+		if (s.equals("00")) {
+			System.out.println("Calling <" + number + "> through the internet to save money...");
+		} else {
+			super.call(number);
+		}
+	}
+
 }
