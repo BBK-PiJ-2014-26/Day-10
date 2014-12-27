@@ -6,6 +6,13 @@ public class MobilePhone extends OldPhone {
 	private String[] lastNumbers = new String[]{"empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty"};
 
 	/**
+	* Constructor method.
+	*/
+	public MobilePhone(String brand) {
+		super(brand);
+	}
+
+	/**
 	 * Outputs a @param message specified by a user.
 	 */
 	public void ringAlarm(String message) {
