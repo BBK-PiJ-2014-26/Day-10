@@ -1,6 +1,13 @@
 public class SmartPhone extends MobilePhone {
 
 	/**
+	* Constructor method.
+	*/
+	public SmartPhone(String brand) {
+		super(brand);
+	}
+
+	/**
 	* Prints a mesage telling a user that they have opened the specified web address.
 	*/
 	public void browseWeb(String address) {
