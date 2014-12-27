@@ -3,7 +3,7 @@ public class MobilePhone extends OldPhone {
 	/**
 	 *  @param lastNumbers is a string array which stores the last 10 numbers which the user has called.
 	 */
-	public String[] lastNumbers = new String[]{"empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty"};
+	private String[] lastNumbers = new String[]{"empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty"};
 
 	/**
 	 * Outputs a @param message specified by a user.
