@@ -4,7 +4,7 @@ public class PhoneLauncher {
 	private SmartPhone myPhone;
 
 	public PhoneLauncher() {
-		this.myPhone = new SmartPhone();
+		this.myPhone = new SmartPhone("nokia");
 	}
 
 	public static void main(String[] args) {
@@ -14,7 +14,7 @@ public class PhoneLauncher {
 	}
 
 	public void launch() {
-		System.out.println("\n" + "Please select an operation. \n" + "1 to call.\n" + "2 to display the last 10 numbers called.\n" + "3 to browse the web.\n" + "4 for your GPS position.\n" + "5 to initiate an alarm.\n" + "6 to play a game.\n" + "7 to quit.\n");
+		System.out.println("\n" + "Please select an operation. \n" + "1 to call.\n" + "2 to display the last 10 numbers called.\n" + "3 to browse the web.\n" + "4 for your GPS position.\n" + "5 to initiate an alarm.\n" + "6 to play a game.\n" + "7 to display brand.\n" + "8 to quit.\n");
 		Scanner sc = new Scanner(System.in);
 		boolean finished = false;
 		if (sc.hasNextInt()) {
@@ -57,7 +57,11 @@ public class PhoneLauncher {
 					this.launch();
 
 			} else if (choice == 7) {
-					System.out.print("Goodbye.");
+					System.out.print(this.myPhone.getBrand() + "\n");
+					this.launch();
+
+			} else if (choice == 8) {
+					System.out.print("Goodbye.\n");
 
 			} else {
 					System.out.print("Invalid option. Please try again.");
